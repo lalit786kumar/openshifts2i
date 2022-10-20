@@ -1,4 +1,4 @@
-FROM  docker.io/bluedata/centos7 
+FROM  centos:latest 
 RUN   yum install httpd -y
 RUN  sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
 COPY  src/  /var/www/html/
